@@ -1,3 +1,3 @@
-import { getWeatherData } from "./getWeatherData";
+import getWeatherData from "./getWeatherData";
 
 getWeatherData('london');
