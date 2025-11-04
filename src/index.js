@@ -1,3 +1,4 @@
 import getWeatherData from "./getWeatherData";
+import attachListeners from "./listeners";
 
-getWeatherData('london');
+attachListeners();
