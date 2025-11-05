@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.searchBarContainer {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000e6;
+    color: white;
+    height: 100px;
+}
+
+.searchForm {
+    font-size: 1.4rem;
+}
+
+label {
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+input {
+    width: 300px;
+    padding: 2px;
+    margin: 0 10px;
+}
+
+.searchButton {
+    width: 80px;
+    height: 23px;
+}
+
+.content > .weatherInfo > span {
+    display: block;
+    text-align: center;
+}
+
+.temperature {
+    font-size: 2.5rem;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}

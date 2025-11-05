@@ -13,7 +13,7 @@ const getWeatherData = async function getWeatherDataFromLocation(location) {
 
         const data = await response.json();
         console.log(data);
-        processWeatherData(data);
+        return processWeatherData(data);
     } catch (error) {
         console.log(error);
     }
