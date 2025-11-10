@@ -1,5 +1,5 @@
 import getWeatherData from "./getWeatherData";
-import render from "./render";
+import {render} from "./render";
 
 const getInputValue = async function getInputValue(event) {
     event.preventDefault();
@@ -46,7 +46,8 @@ const attachListeners = function attachListeners() {
     searchButton.addEventListener('click', getInputValue);
 
     const switchButton = document.querySelector('.switch');
-    switchButton.addEventListener('click', toggleTemperature)
+    switchButton.addEventListener('click', toggleTemperature);
 };
 
-export default attachListeners;
+
+export { attachListeners };

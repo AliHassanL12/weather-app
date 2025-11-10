@@ -1,7 +1,9 @@
 import processWeatherData from "./processWeatherData";
 import { format } from "date-fns";
+import { removeLoadingRender, renderLoading } from "./render";
 
 const getWeatherData = async function getWeatherDataFromLocation(location) {
+    renderLoading();
     const currentDay = format(new Date(), 'yyyy-MM-dd');
     const currentTime = format(new Date(), 'HH:mm:ss');
     const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${currentDay}T${currentTime}?key=DKDBFJVMP2NVPUTXGTMTNJH9X`;
@@ -13,6 +15,7 @@ const getWeatherData = async function getWeatherDataFromLocation(location) {
 
         const data = await response.json();
         console.log(data);
+        removeLoadingRender();
         return processWeatherData(data);
     } catch (error) {
         throw error;
