@@ -5,10 +5,13 @@ const conditionsNode = document.querySelector('.conditions');
 const humidityNode = document.querySelector('.humidity');
 const switchNode = document.querySelector('.switch');
 const loading = document.querySelector('.loading');
+const iconNode = document.querySelector('.icon');
 
-const render = function renderWeatherData(data) {
+const render = async function renderWeatherData(data) {
     const dataCopy = {...data}; 
-    const { address, temp, humidity, conditions, feelslike } = dataCopy;
+    const { address, temp, humidity, conditions, feelslike, icon } = dataCopy;
+    const importedIcon = await import(`./images/${icon}.png`);
+    iconNode.src = importedIcon.default;
     const capitalisedAddress = address.charAt(0).toUpperCase() + address.slice(1);
 
     switchNode.textContent = 'Convert to °C';
