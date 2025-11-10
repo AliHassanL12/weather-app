@@ -8,8 +8,10 @@ const render = function renderWeatherData(data) {
     const conditionsNode = document.querySelector('.conditions');
     const humidityNode = document.querySelector('.humidity');
     locationNode.textContent = capitalisedAddress;
-    tempNode.textContent = `${temp}°`;
-    feelsLikeNode.textContent = `Feels Like: ${feelslike}°`;
+    const switchNode = document.querySelector('.switch');
+    switchNode.textContent = 'Convert to °C';
+    tempNode.textContent = `${temp}°F`;
+    feelsLikeNode.textContent = `Feels Like: ${feelslike}°F`;
     conditionsNode.textContent = `${conditions}`;
     humidityNode.textContent = `Humidity: ${humidity}%`;
 };

@@ -34,7 +34,8 @@ input {
     height: 23px;
 }
 
-.content > .weatherInfo > span {
+.content > .weatherInfo > span,
+.location {
     display: block;
     text-align: center;
 }
@@ -47,4 +48,32 @@ input {
     display: flex;
     justify-content: center;
     padding: 20px;
+}
+
+.switch {
+    display: inline;
+}
+
+.weatherInfo > div {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    margin-left: 10px;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.774);
+    color: white;
+    cursor: pointer;
+}
+
+.switch:hover {
+    transform: scale(1.01);
+}
+
+.switch:active {
+    background-color: rgba(0, 0, 0, 0.815);
+    transform: scale(1.02);
 }
